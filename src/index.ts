@@ -176,7 +176,7 @@ let dev: Programador={
     tomarMate:true
 }
 
-let dev2: Programador={
+let dev2={
     nombre:'Federico',
     tecnologias:['html','cobol'],
     tomarMate: null
@@ -187,6 +187,22 @@ function enviarCurriculum(programador:Programador){
 }
 
 enviarCurriculum(dev)
+
+// clases y POO signo de ? para indicar la inicializacion de un atributo, this señala los atributos
+// las clases son instancias de los objetos
+
+class Pelicula {
+    nombre?:string='beetlejuice';
+    protagonista?: string[];
+    actores?:string[];
+
+    proyectarEnCine(){ //metodo
+     console.log(`la pelicula${this.nombre} esta siendo proyectada`)
+    }
+}
+    const pelicula=new Pelicula()
+    pelicula.proyectarEnCine()
+    
 
 
 

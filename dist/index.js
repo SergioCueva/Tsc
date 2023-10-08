@@ -82,4 +82,14 @@ function enviarCurriculum(programador) {
     console.log(`Este curriculum es de ${programador.nombre}`);
 }
 enviarCurriculum(dev);
+class Pelicula {
+    constructor() {
+        this.nombre = 'beetlejuice';
+    }
+    proyectarEnCine() {
+        console.log(`${this.nombre} esta siendo proyectada`);
+    }
+}
+const pelicula = new Pelicula();
+pelicula.proyectarEnCine();
 //# sourceMappingURL=index.js.map
