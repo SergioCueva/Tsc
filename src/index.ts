@@ -58,11 +58,56 @@ enum Talla{Chica='s',Mediana='m',Grande='l',ExtraGrande='xl'}
 const variable1 = Talla.Grande
 
 console.log(variable1)
+// estados de cargos 
+//idle  aun no se carga
+//loading esta cargando
+// sucess  exito
+//error  error
+
+const enum LoadingState{Idle,loading,Succes,Error}
+
+const estado=LoadingState.Succes
+
+// objetos
+// definir objetos tipo de persona con sus atributos
+
+type Direccion={
+    numero:number,
+    calle:string,
+    pais:string
+}
+type Persona ={
+    readonly id:number,
+    nombre:string,
+    talla:Talla,
+    direccion:Direccion
+       
+    }
+// puedo llamar a persona
+const objeto: Persona={
+   id:1,
+nombre:'hola mundo',
+talla: Talla.Mediana,
+direccion: {
+    numero:1,
+    calle:'siempre viva',
+    pais:'chanchito feliz'
+   }
+}
+
+// funciones 
+// se puede poner void para no devolver nada
+
+let intermiami:number=11
+let fcdallas: number=11
+function jugar(equipo1:number,equipo2:number):void{
+    if(equipo1>equipo2) console.log('gana inter miami')
+    if(equipo1==equipo2) console.log('empatan inter miami')
+    if(equipo1<equipo2) console.log('pierde fcdalas')
+}
+
+jugar(intermiami,fcdallas)
 
 
-
-
-
- 
 
  
