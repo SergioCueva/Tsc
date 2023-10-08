@@ -43,6 +43,7 @@ let intermiami = 11;
 let fcdallas = 11;
 let messi = 1;
 let juegaMessi = true;
+let palabras = 'me emocione al verlo a messi';
 function jugar(equipo1, equipo2, juegaMessi) {
     let motivo = '';
     if (juegaMessi) {
@@ -57,4 +58,11 @@ function jugar(equipo1, equipo2, juegaMessi) {
         console.log('pierde fcdalas');
 }
 jugar(intermiami, fcdallas, juegaMessi);
+let disney;
+disney = 'Star War y Marvel ';
+console.log(disney);
+disney = 150000000;
+console.log(disney);
+disney = true;
+console.log(disney);
 //# sourceMappingURL=index.js.map

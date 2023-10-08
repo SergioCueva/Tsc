@@ -102,6 +102,7 @@ let intermiami:number=11
 let fcdallas: number=11
 let messi: number=1
 let juegaMessi: boolean= true
+let palabras: string='me emocione al verlo a messi'
 
 function jugar(equipo1:number,equipo2:number,juegaMessi:boolean):void{
     let motivo:string =''
@@ -116,6 +117,18 @@ function jugar(equipo1:number,equipo2:number,juegaMessi:boolean):void{
 }
 
 jugar(intermiami,fcdallas,juegaMessi)
+
+// any cualquier datos curso typescript
+
+let disney ;
+disney='Star War y Marvel '
+console.log(disney)
+
+disney=150000000
+console.log(disney)
+
+disney= true
+console.log(disney)
 
 
 
