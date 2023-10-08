@@ -100,13 +100,23 @@ direccion: {
 
 let intermiami:number=11
 let fcdallas: number=11
-function jugar(equipo1:number,equipo2:number):void{
-    if(equipo1>equipo2) console.log('gana inter miami')
+let messi: number=1
+let juegaMessi: boolean= true
+
+function jugar(equipo1:number,equipo2:number,juegaMessi:boolean):void{
+    let motivo:string =''
+    if(juegaMessi) {
+        equipo1 += messi
+        motivo='porque juega messi'
+    }
+
+    if(equipo1>equipo2) console.log(`gana inter miami ${motivo}`)
     if(equipo1==equipo2) console.log('empatan inter miami')
     if(equipo1<equipo2) console.log('pierde fcdalas')
 }
 
-jugar(intermiami,fcdallas)
+jugar(intermiami,fcdallas,juegaMessi)
+
 
 
 

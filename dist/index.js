@@ -41,13 +41,20 @@ const objeto = {
 };
 let intermiami = 11;
 let fcdallas = 11;
-function jugar(equipo1, equipo2) {
+let messi = 1;
+let juegaMessi = true;
+function jugar(equipo1, equipo2, juegaMessi) {
+    let motivo = '';
+    if (juegaMessi) {
+        equipo1 += messi;
+        motivo = 'porque juega messi';
+    }
     if (equipo1 > equipo2)
-        console.log('gana inter miami');
+        console.log(`gana inter miami ${motivo}`);
     if (equipo1 == equipo2)
         console.log('empatan inter miami');
     if (equipo1 < equipo2)
         console.log('pierde fcdalas');
 }
-jugar(intermiami, fcdallas);
+jugar(intermiami, fcdallas, juegaMessi);
 //# sourceMappingURL=index.js.map
