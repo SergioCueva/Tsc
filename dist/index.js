@@ -41,13 +41,45 @@ const objeto = {
 };
 let intermiami = 11;
 let fcdallas = 11;
-function jugar(equipo1, equipo2) {
+let messi = 1;
+let juegaMessi = true;
+let palabras = 'me emocione al verlo a messi';
+function jugar(equipo1, equipo2, juegaMessi) {
+    let motivo = '';
+    if (juegaMessi) {
+        equipo1 += messi;
+        motivo = 'porque juega messi';
+    }
     if (equipo1 > equipo2)
-        console.log('gana inter miami');
+        console.log(`gana inter miami ${motivo}`);
     if (equipo1 == equipo2)
         console.log('empatan inter miami');
     if (equipo1 < equipo2)
         console.log('pierde fcdalas');
 }
-jugar(intermiami, fcdallas);
+jugar(intermiami, fcdallas, juegaMessi);
+let disney;
+disney = 'Star War y Marvel ';
+console.log(disney);
+disney = 150000000;
+console.log(disney);
+disney = true;
+console.log(disney);
+let arregloNumeros = [1, 2, 3, 4, 5, 6];
+let arregloTexto = ['html', 'cs', 'js'];
+arregloTexto[0].indexOf('html');
+let dev = {
+    nombre: 'sergio corde',
+    tecnologias: ['react', 'angular', 'svelte'],
+    tomarMate: true
+};
+let dev2 = {
+    nombre: 'Federico',
+    tecnologias: ['html', 'cobol'],
+    tomarMate: null
+};
+function enviarCurriculum(programador) {
+    console.log(`Este curriculum es de ${programador.nombre}`);
+}
+enviarCurriculum(dev);
 //# sourceMappingURL=index.js.map
