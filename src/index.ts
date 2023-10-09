@@ -190,19 +190,33 @@ enviarCurriculum(dev)
 
 // clases y POO signo de ? para indicar la inicializacion de un atributo, this señala los atributos
 // las clases son instancias de los objetos
+// dentro de constructor los this llaman a los atributos del objetos
+
 
 class Pelicula {
-    nombre?:string='beetlejuice';
+    nombre?:string='';
     protagonista?: string[];
     actores?:string[];
 
     proyectarEnCine(){ //metodo
      console.log(`la pelicula${this.nombre} esta siendo proyectada`)
     }
+
+    constructor(nombre:string,protagonista:string[],actores:string[]){
+        this.nombre=nombre,
+        this.protagonista=protagonista,
+        this.actores=actores
+
+    }
 }
-    const pelicula=new Pelicula()
-    pelicula.proyectarEnCine()
-    
+const pelicula=new Pelicula('barbie',['barbie','ken'],['margot robbie','ryangolsin'])
+const pelicula2=new Pelicula('autos',['juan','piero'],['margot robbie','ryangolsin'])
+
+console.log(pelicula2)
+
+
+   
+   
 
 
 

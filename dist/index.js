@@ -83,13 +83,17 @@ function enviarCurriculum(programador) {
 }
 enviarCurriculum(dev);
 class Pelicula {
-    constructor() {
-        this.nombre = 'beetlejuice';
-    }
     proyectarEnCine() {
-        console.log(`${this.nombre} esta siendo proyectada`);
+        console.log(`la pelicula${this.nombre} esta siendo proyectada`);
+    }
+    constructor(nombre, protagonista, actores) {
+        this.nombre = '';
+        this.nombre = nombre,
+            this.protagonista = protagonista,
+            this.actores = actores;
     }
 }
-const pelicula = new Pelicula();
-pelicula.proyectarEnCine();
+const pelicula = new Pelicula('barbie', ['barbie', 'ken'], ['margot robbie', 'ryangolsin']);
+const pelicula2 = new Pelicula('autos', ['juan', 'piero'], ['margot robbie', 'ryangolsin']);
+console.log(pelicula2);
 //# sourceMappingURL=index.js.map
