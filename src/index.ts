@@ -215,10 +215,34 @@ const pelicula2=new Pelicula('autos',['juan','piero'],['margot robbie','ryangols
 console.log(pelicula2)
 
 
-   
-   
+   // encapsulamiento y genericos
+   //setter --ENVIAR
+   //getter -- RECIBIR
+   // <T> GENERICO
 
+class Sorteo<T>{
+    private ticket?: T;
+    
+    constructor(private nombre:string
+    ){}
 
+    setTicket(ticket:T){
+        this.ticket=ticket
+    }
+  
+    getTicket(){
+        return this.ticket
+    }
+
+    //metodo
+   public sortear(): string{
+    return `Para ${this.nombre} el ticket es ${this.ticket}`
+   }
+}
+// instancia
+let sorteo =new Sorteo<number>('sergi code')
+sorteo.setTicket(7)
+console.log(sorteo.sortear())
 
 
  

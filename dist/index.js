@@ -96,4 +96,21 @@ class Pelicula {
 const pelicula = new Pelicula('barbie', ['barbie', 'ken'], ['margot robbie', 'ryangolsin']);
 const pelicula2 = new Pelicula('autos', ['juan', 'piero'], ['margot robbie', 'ryangolsin']);
 console.log(pelicula2);
+class Sorteo {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+    setTicket(ticket) {
+        this.ticket = ticket;
+    }
+    getTicket() {
+        return this.ticket;
+    }
+    sortear() {
+        return `Para ${this.nombre} el ticket es ${this.ticket}`;
+    }
+}
+let sorteo = new Sorteo('sergi code');
+sorteo.setTicket(7);
+console.log(sorteo.sortear());
 //# sourceMappingURL=index.js.map
