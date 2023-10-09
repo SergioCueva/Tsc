@@ -193,7 +193,7 @@ enviarCurriculum(dev)
 // dentro de constructor los this llaman a los atributos del objetos
 
 
-class Pelicula {
+class Pelicula { //objetos y atributos
     nombre?:string='';
     protagonista?: string[];
     actores?:string[];
@@ -202,7 +202,7 @@ class Pelicula {
      console.log(`la pelicula${this.nombre} esta siendo proyectada`)
     }
 
-    constructor(nombre:string,protagonista:string[],actores:string[]){
+    constructor(nombre:string,protagonista:string[],actores:string[]){ //constructor
         this.nombre=nombre,
         this.protagonista=protagonista,
         this.actores=actores
