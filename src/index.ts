@@ -58,11 +58,167 @@ enum Talla{Chica='s',Mediana='m',Grande='l',ExtraGrande='xl'}
 const variable1 = Talla.Grande
 
 console.log(variable1)
+// estados de cargos 
+//idle  aun no se carga
+//loading esta cargando
+// sucess  exito
+//error  error
+
+const enum LoadingState{Idle,loading,Succes,Error}
+
+const estado=LoadingState.Succes
+
+// objetos
+// definir objetos tipo de persona con sus atributos
+
+type Direccion={
+    numero:number,
+    calle:string,
+    pais:string
+}
+type Persona ={
+    readonly id:number,
+    nombre:string,
+    talla:Talla,
+    direccion:Direccion
+       
+    }
+// puedo llamar a persona
+const objeto: Persona={
+   id:1,
+nombre:'hola mundo',
+talla: Talla.Mediana,
+direccion: {
+    numero:1,
+    calle:'siempre viva',
+    pais:'chanchito feliz'
+   }
+}
 
 
+// funciones 
+// se puede poner void para no devolver nada
+
+let intermiami:number=11
+let fcdallas: number=11
+let messi: number=1
+let juegaMessi: boolean= true
+let palabras: string='me emocione al verlo a messi'
+
+function jugar(equipo1:number,equipo2:number,juegaMessi:boolean):void{
+    let motivo:string =''
+    if(juegaMessi) {
+        equipo1 += messi
+        motivo='porque juega messi'
+    }
+
+    if(equipo1>equipo2) console.log(`gana inter miami ${motivo}`)
+    if(equipo1==equipo2) console.log('empatan inter miami')
+    if(equipo1<equipo2) console.log('pierde fcdalas')
+}
+
+jugar(intermiami,fcdallas,juegaMessi)
+
+// todo any cualquier datos curso 
+// recomendacion cambiar por el tipado correspondiente number,string,boolean typescript
+
+let disney:any;
+disney='Star War y Marvel '
+console.log(disney)
+
+disney=150000000
+console.log(disney)
+
+disney= true
+console.log(disney)
 
 
+// comenzando con array , para definir el tipo de arreglo entre []
 
+let arregloNumeros:number[]= [1,2,3,4,5,6]
+let arregloTexto: string[]= ['html','cs','js']
  
+arregloTexto[0].indexOf('html')
+
+// objetos
+// definir objetos tipo de programador personalizados tipe y clases van iniciando mayuscula
+
+//type Programador={  //tipado de objetos type
+
+   // nombre:string,
+   // tecnologias:string[],
+   // tomarMate:boolean|null
+//}
+
+//let programador: Programador={
+   // nombre:'sergio corde',
+   // tecnologias:['react','angular','svelte'],
+   // tomarMate:true
+//}
+
+//let programador2: Programador={
+  //  nombre:'Federico',
+  //  tecnologias:['html','cobol'],
+   // tomarMate: null
+//}
+
+// interfaces programando
+
+interface Programador{
+    nombre:string,
+    tecnologias:string[],
+    tomarMate?:boolean | null
+}
+
+let dev: Programador={
+    nombre:'sergio corde',
+    tecnologias:['react','angular','svelte'],
+    tomarMate:true
+}
+
+let dev2={
+    nombre:'Federico',
+    tecnologias:['html','cobol'],
+    tomarMate: null
+}
+
+function enviarCurriculum(programador:Programador){
+    console.log(`Este curriculum es de ${programador.nombre}`)
+}
+
+enviarCurriculum(dev)
+
+// clases y POO signo de ? para indicar la inicializacion de un atributo, this señala los atributos
+// las clases son instancias de los objetos
+// dentro de constructor los this llaman a los atributos del objetos
+
+
+class Pelicula { //objetos y atributos
+    nombre?:string='';
+    protagonista?: string[];
+    actores?:string[];
+
+    proyectarEnCine(){ //metodo
+     console.log(`la pelicula${this.nombre} esta siendo proyectada`)
+    }
+
+    constructor(nombre:string,protagonista:string[],actores:string[]){ //constructor
+        this.nombre=nombre,
+        this.protagonista=protagonista,
+        this.actores=actores
+
+    }
+}
+const pelicula=new Pelicula('barbie',['barbie','ken'],['margot robbie','ryangolsin'])
+const pelicula2=new Pelicula('autos',['juan','piero'],['margot robbie','ryangolsin'])
+
+console.log(pelicula2)
+
+
+   
+   
+
+
+
 
  
